@@ -1,0 +1,31 @@
+<html>
+<title>TASK4.2</title>
+<body>
+<h1>Task4.2</h1>
+
+<script>
+    function LOG(LED)
+{
+    console.log(LED);
+    var requestURL = "https://api.particle.io/v1/devices/" + "e00fce6874ed0aa54f48a9ce" + "/" + "blink" + "/";
+    $.post( requestURL, { params: LED, access_token: "abe992af72858fccd48a7fcf525ae09a62284227" });
+}
+  
+</script>
+
+<input type="radio" id="RED" name="light" value="RED" onClick="LOG('red')">
+<label for="RED">RED</label><br>
+
+<input type="radio" id="BLUE" name="light" value="BLUE" onClick="LOG('blue')"> 
+<label for="BLUE">BLUE</label><br>
+
+<input type="radio" id="GREEN" name="light" value="GREEN" onClick="LOG('green')">
+<label for="GREEN">GREEN</label>
+
+</body>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+</script>
+</html>
